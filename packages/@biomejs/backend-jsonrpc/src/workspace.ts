@@ -3433,6 +3433,11 @@ export interface Nursery {
 	 */
 	noVueMixin?: NoVueMixinConfiguration;
 	/**
+	 * Disallow more than one object in an array passed to :class.
+	 * See https://biomejs.dev/linter/rules/no-vue-multiple-objects-in-class
+	 */
+	noVueMultipleObjectsInClass?: NoVueMultipleObjectsInClassConfiguration;
+	/**
 	 * Disallow passing more than one argument to a Vue slot.
 	 * See https://biomejs.dev/linter/rules/no-vue-multiple-slot-args
 	 */
@@ -6384,6 +6389,9 @@ export type NoVueLoneTemplateConfiguration =
 export type NoVueMixinConfiguration =
 	| RulePlainConfiguration
 	| RuleWithNoVueMixinOptions;
+export type NoVueMultipleObjectsInClassConfiguration =
+	| RulePlainConfiguration
+	| RuleWithNoVueMultipleObjectsInClassOptions;
 export type NoVueMultipleSlotArgsConfiguration =
 	| RulePlainConfiguration
 	| RuleWithNoVueMultipleSlotArgsOptions;
@@ -9253,6 +9261,10 @@ export interface RuleWithNoVueMixinOptions {
 	level: RulePlainConfiguration;
 	options?: NoVueMixinOptions;
 }
+export interface RuleWithNoVueMultipleObjectsInClassOptions {
+	level: RulePlainConfiguration;
+	options?: NoVueMultipleObjectsInClassOptions;
+}
 export interface RuleWithNoVueMultipleSlotArgsOptions {
 	level: RulePlainConfiguration;
 	options?: NoVueMultipleSlotArgsOptions;
@@ -11957,6 +11969,7 @@ export interface NoVueLoneTemplateOptions {
 	ignoreAccessible?: boolean;
 }
 export type NoVueMixinOptions = {};
+export type NoVueMultipleObjectsInClassOptions = {};
 export type NoVueMultipleSlotArgsOptions = {};
 export type NoVueMutatingPropsOptions = {};
 export type NoVueRequiredPropWithDefaultOptions = {};
@@ -13808,6 +13821,7 @@ export type Category =
 	| "lint/nursery/noVueLifecycleAfterAwait"
 	| "lint/nursery/noVueLoneTemplate"
 	| "lint/nursery/noVueMixin"
+	| "lint/nursery/noVueMultipleObjectsInClass"
 	| "lint/nursery/noVueMultipleSlotArgs"
 	| "lint/nursery/noVueMutatingProps"
 	| "lint/nursery/noVueRestrictedCallAfterAwait"
