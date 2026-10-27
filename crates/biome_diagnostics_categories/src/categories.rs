@@ -444,6 +444,7 @@ define_categories! {
     "lint/nursery/useUniqueVariableNames": "https://biomejs.dev/linter/rules/use-unique-variable-names",
     "lint/nursery/useValidTestTitle": "https://biomejs.dev/linter/rules/use-valid-test-title",
     "lint/nursery/useVueBaseImport": "https://biomejs.dev/linter/rules/use-vue-base-import",
+    "lint/nursery/useVueBooleanPropTypeFirst": "https://biomejs.dev/linter/rules/use-vue-boolean-prop-type-first",
     "lint/nursery/useVueComponentIs": "https://biomejs.dev/linter/rules/use-vue-component-is",
     "lint/nursery/useVueConsistentDefineEmitsDeclaration": "https://biomejs.dev/linter/rules/use-vue-consistent-define-emits-declaration",
     "lint/nursery/useVueConsistentDefinePropsDeclaration": "https://biomejs.dev/linter/rules/use-vue-consistent-define-props-declaration",
